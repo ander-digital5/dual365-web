@@ -1,0 +1,25 @@
+---
+// src/components/FeatureItem.astro
+interface Props {
+    number: string;
+    title: string;
+    description: string;
+    colorVar: string; // e.g. "var(--rosa)"
+}
+
+const { number, title, description, colorVar } = Astro.props;
+const textClass = `text-[${colorVar}]`;
+const bgHoverClass = `group-hover:bg-[${colorVar}]`;
+---
+
+<div class="flex gap-4 group">
+    <div
+        class={`w-12 h-12 rounded-full bg-white border border-[var(--line)] flex items-center justify-center font-bold text-sm z-10 shadow-sm group-hover:text-white transition-all ${textClass} ${bgHoverClass}`}
+    >
+        {number}
+    </div>
+    <div>
+        <h4 class="font-bold text-xl mb-2">{title}</h4>
+        <p class="text-gray-500 text-sm">{description}</p>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+---
+// src/components/Modalities.astro
+import ModalityCard from "./ModalityCard.astro";
+---
+
+<section class="py-32 px-6 lg:px-12 bg-gray-50/50" id="modalidades">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-24">
+            <span
+                class="text-[var(--rosa)] text-xs font-extrabold uppercase tracking-[0.3em] mb-4 block"
+                >Flexibilidad</span
+            >
+            <h2 class="serif text-6xl text-[var(--ink)] mb-8">
+                Adaptado a cada <em>modelo educativo.</em>
+            </h2>
+            <p class="text-gray-500 text-lg">
+                La nueva Ley de FP trae retos. dual365 los resuelve todos,
+                independientemente de la modalidad o comunidad autónoma.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ModalityCard
+                number="01"
+                title="DUAL General"
+                description="Gestión estándar para formación compartida centro-empresa según convenio tradicional."
+                hoverColorVar="var(--rosa)"
+            />
+            <ModalityCard
+                number="02"
+                title="DUAL Intensivo"
+                description="Mayor carga de formación en empresa, con un mínimo del 35% del tiempo en el puesto de trabajo real."
+                hoverColorVar="var(--rosa)"
+            />
+            <ModalityCard
+                number="03"
+                title="DUAL en Contrato de Formación"
+                description="El alumno tiene contrato laboral con la empresa durante su formación DUAL, con sus implicaciones económicas y legales."
+                hoverColorVar="var(--rosa)"
+            />
+            <ModalityCard
+                number="04"
+                title="DUAL Compartido"
+                description="Varios centros y/o empresas comparten la formación y el seguimiento del proceso DUAL del alumno."
+                hoverColorVar="var(--verde)"
+            />
+            <ModalityCard
+                number="05"
+                title="FCT Estándar"
+                description="Digitalización de las prácticas clásicas bajo el mismo paraguas de control y calidad."
+                hoverColorVar="var(--verde)"
+            />
+            <ModalityCard
+                number="06"
+                title="Otras modalidades autonómicas"
+                description="Configurable según la normativa específica de cada una de las 17 Comunidades Autónomas."
+                hoverColorVar="var(--verde)"
+            />
+        </div>
+    </div>
+</section>

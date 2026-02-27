@@ -1,0 +1,95 @@
+---
+interface Props {
+    title?: string;
+}
+
+const { title = "dual365 – Premium SaaS for Dual Training" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>{title}</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Fallback a Tailwind CDN (con plugins solicitados en el diseño original) -->
+        <script
+            is:inline
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
+        ></script>
+        <style type="text/tailwindcss">
+            :root {
+                --rosa: #e8447a;
+                --rosa-mid: #f0729b;
+                --rosa-soft: #fde8ef;
+                --rosa-pale: #fff5f8;
+                --verde: #3daa4e;
+                --verde-mid: #5bbf6c;
+                --verde-soft: #e8f5eb;
+                --verde-pale: #f4faf5;
+                --ink: #1a0a24;
+                --line: rgba(26, 10, 36, 0.06);
+                --glass: rgba(255, 255, 255, 0.8);
+            }
+            body {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                color: var(--ink);
+                background: #ffffff;
+                min-height: max(884px, 100dvh);
+            }
+            .serif {
+                font-family: "DM Serif Display", serif;
+            }
+            .glass {
+                background: var(--glass);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+            }
+            .premium-border {
+                border: 1px solid var(--line);
+            }
+            .lift-effect {
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .lift-effect:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 30px 60px -12px rgba(26, 10, 36, 0.12);
+            }
+            .gradient-border-top {
+                position: relative;
+            }
+            .gradient-border-top::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(
+                    to right,
+                    var(--rosa),
+                    var(--verde)
+                );
+                border-radius: 12px 12px 0 0;
+            }
+        </style>
+    </head>
+    <body class="antialiased">
+        <slot />
+    </body>
+</html>

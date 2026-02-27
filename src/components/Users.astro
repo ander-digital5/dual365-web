@@ -1,0 +1,61 @@
+---
+// src/components/Users.astro
+import UserCard from "./UserCard.astro";
+---
+
+<section class="py-32 px-6 lg:px-12 bg-[var(--rosa-pale)]" id="usuarios">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-20">
+            <span
+                class="text-[var(--rosa)] text-xs font-extrabold uppercase tracking-[0.3em] mb-4 block"
+                >Ecosistema</span
+            >
+            <h2 class="serif text-6xl text-[var(--ink)] mb-6">
+                Una solución, <em>múltiples realidades.</em>
+            </h2>
+            <p class="text-gray-500">
+                Diseñado específicamente para los roles críticos que intervienen
+                en el éxito del modelo dual.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <UserCard
+                icon="account_balance"
+                tag="Estratégico"
+                title="Director/a"
+                description="Supervisa la salud del centro mediante KPIs, convenios y alineación con el mercado laboral."
+                toolName="Cuadro de Mando Ejecutivo"
+                colorClass="var(--rosa)"
+                bgClass="var(--rosa-soft)"
+            />
+            <UserCard
+                icon="psychology"
+                tag="Pedagógico"
+                title="Tutor/a"
+                description="Gestiona el día a día de sus alumnos, las evaluaciones y la comunicación con la empresa."
+                toolName="Gestor del DUAL"
+                colorClass="var(--verde)"
+                bgClass="var(--verde-soft)"
+            />
+            <!-- Note: Tailwind utility classes don't need the custom format handling -->
+            <UserCard
+                icon="business_center"
+                tag="Corporativo"
+                title="Empresa"
+                description="Accede al catálogo de alumnos, lanza ofertas y reporta el seguimiento formativo."
+                toolName="Portal de Empresa"
+                colorClass="indigo-500"
+                bgClass="indigo-50"
+            />
+            <UserCard
+                icon="person_pin"
+                tag="Protagonista"
+                title="Alumno/a"
+                description="Eje central del proceso. Registra su aprendizaje y accede a toda su documentación."
+                toolName="Portal de Seguimiento"
+                colorClass="amber-500"
+                bgClass="amber-50"
+            />
+        </div>
+    </div>
+</section>

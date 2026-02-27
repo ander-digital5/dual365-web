@@ -1,0 +1,232 @@
+---
+// src/components/Dashboard.astro
+---
+
+<section class="py-32 px-6 lg:px-12 bg-white" id="dashboard">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+        <div class="order-2 lg:order-1">
+            <div
+                class="bg-[var(--ink)] p-1 rounded-[42px] shadow-[0_40px_100px_-20px_rgba(26,10,36,0.3)]"
+            >
+                <div
+                    class="bg-[#0F0515] p-10 rounded-[38px] relative overflow-hidden"
+                >
+                    <div
+                        class="absolute -top-20 -right-20 w-80 h-80 bg-[var(--rosa)]/10 blur-[100px]"
+                    >
+                    </div>
+                    <div
+                        class="flex items-center justify-between border-b border-white/5 pb-8 mb-10"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10"
+                            >
+                                <img
+                                    alt="logo"
+                                    class="h-4 invert grayscale brightness-200"
+                                    src="/logo.svg"
+                                />
+                            </div>
+                            <span class="font-bold text-white tracking-tight"
+                                >Panel de Control</span
+                            >
+                        </div>
+                        <div class="flex gap-2.5">
+                            <div class="w-2.5 h-2.5 rounded-full bg-white/10">
+                            </div>
+                            <div
+                                class="w-2.5 h-2.5 rounded-full bg-[var(--rosa)]"
+                            >
+                            </div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-white/10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-12 gap-8">
+                        <div class="col-span-4 space-y-6">
+                            <div
+                                class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md"
+                            >
+                                <p
+                                    class="text-[10px] text-white/40 uppercase font-black tracking-widest mb-6"
+                                >
+                                    Estado de Alumnos
+                                </p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-2 h-2 rounded-full bg-[var(--verde)]"
+                                        >
+                                        </div>
+                                        <span
+                                            class="text-[11px] text-white/70 font-medium"
+                                            >Asignados (244)</span
+                                        >
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-2 h-2 rounded-full bg-amber-400"
+                                        >
+                                        </div>
+                                        <span
+                                            class="text-[11px] text-white/70 font-medium"
+                                            >En espera (12)</span
+                                        >
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-2 h-2 rounded-full bg-[var(--rosa)]"
+                                        >
+                                        </div>
+                                        <span
+                                            class="text-[11px] text-white/70 font-medium"
+                                            >Sin empresa (5)</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-br from-[var(--rosa)] to-[var(--rosa-mid)] p-6 rounded-2xl"
+                            >
+                                <p class="text-white font-bold text-xs mb-1">
+                                    Nueva Alerta
+                                </p>
+                                <p class="text-white/80 text-[10px]">
+                                    3 convenios pendientes de firma digital
+                                    caducan hoy.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-span-8 space-y-6">
+                            <div
+                                class="bg-white/5 p-8 rounded-2xl border border-white/10"
+                            >
+                                <p
+                                    class="text-[10px] text-white/40 uppercase font-black tracking-widest mb-8"
+                                >
+                                    FAMILIAS PROFESIONALES CON % DE PLAZAS
+                                    CUBIERTAS
+                                </p>
+                                <div class="space-y-7">
+                                    <div class="space-y-2">
+                                        <div
+                                            class="flex justify-between text-xs text-white/90 font-bold"
+                                        >
+                                            <span>Informática</span>
+                                            <span>92%</span>
+                                        </div>
+                                        <div
+                                            class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"
+                                        >
+                                            <div
+                                                class="h-full bg-gradient-to-r from-[var(--rosa)] to-[var(--rosa-mid)] w-[92%]"
+                                            >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div
+                                            class="flex justify-between text-xs text-white/90 font-bold"
+                                        >
+                                            <span>Sanidad</span>
+                                            <span>74%</span>
+                                        </div>
+                                        <div
+                                            class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"
+                                        >
+                                            <div
+                                                class="h-full bg-gradient-to-r from-[var(--verde)] to-[var(--verde-mid)] w-[74%]"
+                                            >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div
+                                            class="flex justify-between text-xs text-white/90 font-bold"
+                                        >
+                                            <span>Administración</span>
+                                            <span>88%</span>
+                                        </div>
+                                        <div
+                                            class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"
+                                        >
+                                            <div
+                                                class="h-full bg-indigo-500 w-[88%]"
+                                            >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-1 lg:order-2 space-y-10">
+            <span
+                class="text-[var(--verde)] text-sm font-extrabold uppercase tracking-[0.3em]"
+                >Educación Basada en Datos</span
+            >
+            <h2 class="serif text-6xl text-[var(--ink)] leading-tight">
+                Decisiones que <em>impulsan</em> el talento.
+            </h2>
+            <p class="text-gray-500 text-xl leading-relaxed">
+                Olvídate de las hojas de cálculo. Centraliza la información y
+                obtén una visión analítica del impacto de la formación en tiempo
+                real.
+            </p>
+            <div class="space-y-5">
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                    >
+                        ✓
+                    </div>
+                    <div>
+                        <p class="font-bold text-[var(--ink)]">
+                            Plazas cubiertas por familia
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Visualiza en tiempo real qué familias tienen alumnos
+                            pendientes de asignar y dónde tienes huecos.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                    >
+                        ✓
+                    </div>
+                    <div>
+                        <p class="font-bold text-[var(--ink)]">
+                            Alertas de convenios y caducidades
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Nunca se te pasa una firma, una renovación o una
+                            fecha límite de documentación.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                    >
+                        ✓
+                    </div>
+                    <div>
+                        <p class="font-bold text-[var(--ink)]">
+                            Seguimiento de evaluaciones
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Controla qué tutores han completado sus evaluaciones
+                            y cuáles están pendientes por periodo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

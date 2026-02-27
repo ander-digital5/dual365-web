@@ -1,0 +1,234 @@
+---
+// src/components/Hero.astro
+---
+
+<section
+    class="hero-gradient pt-40 pb-24 px-6 lg:px-12 overflow-hidden relative"
+>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-10 relative z-10">
+            <div
+                class="inline-flex items-center gap-3 px-4 py-2 bg-white/60 border border-[var(--line)] rounded-full backdrop-blur-md"
+            >
+                <span
+                    class="w-2.5 h-2.5 bg-[var(--verde)] rounded-full animate-pulse"
+                ></span>
+                <span
+                    class="text-[10px] uppercase tracking-[0.2em] font-extrabold text-[var(--ink)]"
+                    >Líderes en FP del País Vasco</span
+                >
+            </div>
+            <h1
+                class="serif text-7xl lg:text-8xl leading-[0.95] text-[var(--ink)] tracking-tight"
+            >
+                Gestionar la <em>Formación Dual</em> ahora es simple.
+            </h1>
+            <p
+                class="text-gray-500 text-lg lg:text-xl max-w-xl leading-relaxed"
+            >
+                Una plataforma integral que conecta centros, empresas y alumnos
+                para maximizar el potencial de la formación profesional.
+            </p>
+            <div class="flex flex-wrap gap-5">
+                <a
+                    class="bg-[var(--rosa)] text-white px-10 py-5 rounded-full font-bold shadow-2xl shadow-pink-500/25 hover:scale-105 transition-transform"
+                    href="#cta">Empezar ahora</a
+                >
+                <a
+                    class="bg-white px-10 py-5 rounded-full font-bold border border-[var(--line)] hover:bg-gray-50 transition-colors flex items-center gap-2"
+                    href="#func"
+                    >Explorar sistema <span
+                        class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                    >
+                </a>
+            </div>
+            <div
+                class="pt-10 flex items-center gap-8 border-t border-[var(--line)]"
+            >
+                <div class="flex -space-x-3">
+                    <div
+                        class="w-10 h-10 rounded-full border-2 border-white bg-gray-200"
+                    >
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-full border-2 border-white bg-gray-300"
+                    >
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-full border-2 border-white bg-gray-400"
+                    >
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-gray-900">
+                        +50 Centros Públicos
+                    </p>
+                    <p
+                        class="text-[10px] text-gray-400 uppercase tracking-widest"
+                    >
+                        Confían en nuestra tecnología
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <div
+                class="relative z-20 bg-white p-2 rounded-[32px] shadow-[0_32px_80px_-20px_rgba(26,10,36,0.15)] premium-border"
+            >
+                <div class="bg-[#F9FAFB] rounded-[24px] overflow-hidden">
+                    <div
+                        class="px-6 py-4 flex items-center justify-between border-b border-gray-100 bg-white"
+                    >
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-400/20">
+                            </div>
+                            <div class="w-3 h-3 rounded-full bg-amber-400/20">
+                            </div>
+                            <div class="w-3 h-3 rounded-full bg-emerald-400/20">
+                            </div>
+                        </div>
+                        <div
+                            class="px-3 py-1 bg-gray-50 rounded-md text-[10px] font-bold text-gray-400"
+                        >
+                            DASHBOARD DUAL365
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div
+                                class="bg-white p-6 rounded-2xl shadow-sm premium-border"
+                            >
+                                <p
+                                    class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-1"
+                                >
+                                    Empresas Activas
+                                </p>
+                                <div class="flex items-end gap-2">
+                                    <span
+                                        class="serif text-4xl text-[var(--ink)]"
+                                        >842</span
+                                    >
+                                    <span
+                                        class="text-[var(--verde)] text-xs font-bold mb-1"
+                                        >+12%</span
+                                    >
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white p-6 rounded-2xl shadow-sm premium-border"
+                            >
+                                <p
+                                    class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-1"
+                                >
+                                    SATISFACCIÓN
+                                </p>
+                                <div class="flex items-end gap-2">
+                                    <span
+                                        class="serif text-4xl text-[var(--rosa)]"
+                                        >94%</span
+                                    >
+                                    <span
+                                        class="text-[var(--rosa)] text-xs font-bold mb-1"
+                                        >Optimo</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm premium-border"
+                        >
+                            <div class="flex justify-between items-center mb-6">
+                                <h4 class="font-bold text-sm">
+                                    Distribución por Especialidad
+                                </h4>
+                                <span
+                                    class="material-symbols-outlined text-gray-400 text-sm"
+                                    >more_horiz</span
+                                >
+                            </div>
+                            <div
+                                class="flex items-end gap-3 h-32 justify-between px-2"
+                            >
+                                <div
+                                    class="w-full bg-[var(--rosa-soft)] rounded-t-lg relative group"
+                                    style="height: 60%"
+                                >
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-bold hidden group-hover:block"
+                                    >
+                                        60%
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full bg-[var(--verde-soft)] rounded-t-lg relative group"
+                                    style="height: 85%"
+                                >
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-bold hidden group-hover:block"
+                                    >
+                                        85%
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full bg-indigo-50 rounded-t-lg relative group"
+                                    style="height: 45%"
+                                >
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-bold hidden group-hover:block"
+                                    >
+                                        45%
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full bg-amber-50 rounded-t-lg relative group"
+                                    style="height: 70%"
+                                >
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-bold hidden group-hover:block"
+                                    >
+                                        70%
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full bg-[var(--rosa-mid)] rounded-t-lg relative group"
+                                    style="height: 95%"
+                                >
+                                    <div
+                                        class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-bold hidden group-hover:block"
+                                    >
+                                        95%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute -top-12 -right-12 w-64 h-64 bg-[var(--rosa)]/5 rounded-full blur-[100px] -z-10"
+            >
+            </div>
+            <div
+                class="absolute -bottom-12 -left-12 w-80 h-80 bg-[var(--verde)]/5 rounded-full blur-[100px] -z-10"
+            >
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero-gradient {
+        background: radial-gradient(
+                circle at 10% 20%,
+                var(--rosa-pale) 0%,
+                transparent 40%
+            ),
+            radial-gradient(
+                circle at 90% 80%,
+                var(--verde-pale) 0%,
+                transparent 40%
+            ),
+            radial-gradient(circle at 50% 50%, #ffffff 0%, #fcfcfc 100%);
+    }
+</style>

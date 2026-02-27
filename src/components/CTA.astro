@@ -1,0 +1,61 @@
+---
+// src/components/CTA.astro
+---
+
+<section
+    class="py-40 px-6 lg:px-12 bg-[var(--ink)] text-white relative overflow-hidden"
+    id="cta"
+>
+    <div
+        class="absolute inset-0 bg-gradient-to-br from-[#1A0A24] via-[#2D1140] to-[#1A0A24]"
+    >
+    </div>
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle,rgba(232,68,122,0.12)_0%,transparent_70%)] pointer-events-none"
+    >
+    </div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <span
+            class="text-[var(--verde-mid)] text-xs font-extrabold uppercase tracking-[0.4em] mb-10 block"
+            >Próximos Pasos</span
+        >
+        <h2
+            class="serif text-5xl lg:text-7xl mt-8 mb-10 leading-[0.9] tracking-tight"
+        >
+            Transforma la gestión <em>DUAL</em> de tu centro hoy.
+        </h2>
+        <p
+            class="text-white/60 text-xl mb-16 max-w-2xl mx-auto leading-relaxed"
+        >
+            Únete a la red de centros públicos y privados que ya han
+            transformado su gestión operativa y pedagógica con nosotros.
+        </p>
+        <div class="max-w-xl mx-auto">
+            <form class="flex flex-col md:flex-row gap-4 mb-8">
+                <input
+                    class="flex-1 bg-white/5 border border-white/10 rounded-full px-8 py-5 focus:outline-none focus:border-[var(--rosa)] transition-colors placeholder:text-white/20 text-white"
+                    placeholder="Email corporativo del centro"
+                    type="email"
+                />
+                <button
+                    class="bg-[var(--verde)] text-white font-extrabold px-12 py-5 rounded-full shadow-2xl shadow-emerald-500/25 hover:scale-105 transition-transform flex items-center justify-center gap-2"
+                    type="button"
+                >
+                    Solicitar Demo <span
+                        class="material-symbols-outlined text-sm"
+                        >rocket_launch</span
+                    >
+                </button>
+            </form>
+            <div
+                class="flex items-center justify-center gap-6 text-white/30 text-[11px] font-bold uppercase tracking-widest"
+            >
+                <span>✓ Respuesta &lt; 24h</span>
+                <span class="w-1.5 h-1.5 bg-white/10 rounded-full"></span>
+                <span>✓ Demo Personalizada</span>
+                <span class="w-1.5 h-1.5 bg-white/10 rounded-full"></span>
+                <span>✓ Sin Compromiso</span>
+            </div>
+        </div>
+    </div>
+</section>

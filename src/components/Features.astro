@@ -1,0 +1,107 @@
+---
+// src/components/Features.astro
+import FeatureItem from "./FeatureItem.astro";
+import FeatureCard from "./FeatureCard.astro";
+---
+
+<section class="py-32 px-6 lg:px-12 bg-white" id="func">
+    <div class="max-w-7xl mx-auto">
+        <div class="max-w-3xl mb-24">
+            <span
+                class="text-[var(--rosa)] text-xs font-extrabold uppercase tracking-[0.3em] mb-4 block"
+                >Funcionalidades</span
+            >
+            <h2
+                class="serif text-6xl lg:text-7xl text-[var(--ink)] leading-tight mb-8"
+            >
+                El ecosistema DUAL, <br /><em>perfectamente orquestado.</em>
+            </h2>
+            <p class="text-gray-500 text-xl">
+                De la captación inicial al seguimiento por competencias, todo
+                ocurre en un mismo entorno seguro y eficiente.
+            </p>
+        </div>
+        <div class="grid lg:grid-cols-12 gap-6">
+            <div class="lg:col-span-4 space-y-16 relative">
+                <div
+                    class="absolute left-[23px] top-4 bottom-4 w-[1px] bg-gradient-to-b from-[var(--rosa)] via-[var(--rosa-mid)] to-[var(--verde)]"
+                >
+                </div>
+                <FeatureItem
+                    number="01"
+                    title="Captación de empresas · Mail Marketing + CRM"
+                    description="Gestión del contacto comercial, registro de llamadas y seguimiento del estado de las ofertas DUAL."
+                    colorVar="var(--rosa)"
+                />
+                <FeatureItem
+                    number="02"
+                    title="Selección y asignación de alumnos"
+                    description="Matching automático entre CVs y perfiles de oferta. Envío a empresa y asignación definitiva en un clic."
+                    colorVar="var(--rosa-mid)"
+                />
+                <FeatureItem
+                    number="03"
+                    title="Convenio y documentación"
+                    description="Generación automática del convenio y documentación oficial, proceso de firma y custodia segura en la plataforma."
+                    colorVar="var(--verde-mid)"
+                />
+                <FeatureItem
+                    number="04"
+                    title="Calendarios y seguimiento"
+                    description="Calendarios de trabajo generados automáticamente. Seguimiento en tiempo real del proceso formativo."
+                    colorVar="var(--verde)"
+                />
+                <FeatureItem
+                    number="05"
+                    title="Evaluación y competencias"
+                    description="El docente evalúa el proceso. La empresa valora competencias. El centro obtiene datos curriculares accionables."
+                    colorVar="var(--verde)"
+                />
+                <FeatureItem
+                    number="06"
+                    title="Dashboard con datos actualizados"
+                    description="Panel de control en tiempo real con todos los indicadores clave para el seguimiento y toma de decisiones del equipo directivo."
+                    colorVar="var(--verde)"
+                />
+            </div>
+            <div class="lg:col-span-8 grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <FeatureCard
+                    icon="domain"
+                    title="Portal Empresa"
+                    description="Acceso propio con ofertas activas, alumnos asignados y herramienta de valoración de competencias."
+                    iconColorClass="text-[var(--rosa)]"
+                />
+                <FeatureCard
+                    icon="school"
+                    title="Portal del Alumno"
+                    description="Acceso a empresa asignada, calendario, convenio y evaluaciones desde cualquier dispositivo."
+                    iconColorClass="text-[var(--rosa-mid)]"
+                />
+                <FeatureCard
+                    icon="analytics"
+                    title="Dashboard Directivo"
+                    description="Panel con todos los KPIs del DUAL actualizados en tiempo real para la toma de decisiones."
+                    iconColorClass="text-[var(--verde-mid)]"
+                />
+                <FeatureCard
+                    icon="history_edu"
+                    title="Gestión Documental"
+                    description="Archivo histórico digital de todos los convenios y anexos formativos."
+                    iconColorClass="text-[var(--verde)]"
+                />
+                <FeatureCard
+                    icon="hub"
+                    title="Firma y Custodia"
+                    description="Toda la documentación oficial firmada, custodiada y accesible."
+                    iconColorClass="text-indigo-500"
+                />
+                <FeatureCard
+                    icon="support_agent"
+                    title="Soporte Premium"
+                    description="Atención técnica experta en normativa DUAL y configuración de ciclos."
+                    iconColorClass="text-amber-500"
+                />
+            </div>
+        </div>
+    </div>
+</section>

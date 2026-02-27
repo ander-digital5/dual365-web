@@ -1,0 +1,21 @@
+---
+// src/components/FeatureCard.astro
+interface Props {
+    icon: string;
+    title: string;
+    description: string;
+    iconColorClass: string; // e.g., "text-[var(--rosa)]"
+}
+
+const { icon, title, description, iconColorClass } = Astro.props;
+---
+
+<div
+    class="lift-effect bg-gray-50/50 p-10 rounded-2xl border border-[var(--line)] gradient-border-top"
+>
+    <span class={`material-symbols-outlined ${iconColorClass} text-3xl mb-6`}
+        >{icon}
+    </span>
+    <h5 class="font-bold text-lg mb-3">{title}</h5>
+    <p class="text-gray-500 text-sm leading-relaxed">{description}</p>
+</div>

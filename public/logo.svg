@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="400" height="180">
+  <!-- Background white -->
+  <rect width="400" height="180" fill="white"/>
+
+  <!-- "dual" in pink/magenta -->
+  <text
+    x="30"
+    y="115"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="90"
+    font-weight="bold"
+    font-style="italic"
+    fill="#E8427A"
+    letter-spacing="-2"
+  >dual</text>
+
+  <!-- "365" in green, superscript style -->
+  <text
+    x="248"
+    y="72"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="42"
+    font-weight="bold"
+    fill="#3A8A3A"
+  >365</text>
+
+  <!-- "educación dual en la nube" tagline in green -->
+  <text
+    x="30"
+    y="148"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="22"
+    font-style="italic"
+    fill="#3A8A3A"
+    letter-spacing="0.5"
+  >educación dual en la nube</text>
+</svg>
