@@ -9,12 +9,11 @@ interface Props {
 
 const { number, title, description, colorVar } = Astro.props;
 const textClass = `text-[${colorVar}]`;
-const bgHoverClass = `group-hover:bg-[${colorVar}]`;
 ---
 
-<div class="flex gap-4 group">
+<div class="flex gap-4">
     <div
-        class={`w-12 h-12 rounded-full bg-white border border-[var(--line)] flex items-center justify-center font-bold text-sm z-10 shadow-sm group-hover:text-white transition-all ${textClass} ${bgHoverClass}`}
+        class={`w-12 h-12 rounded-full bg-white border border-[var(--line)] flex items-center justify-center font-bold text-sm z-10 shadow-sm ${textClass}`}
     >
         {number}
     </div>

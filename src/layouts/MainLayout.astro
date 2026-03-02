@@ -1,9 +1,23 @@
 ---
+import '../styles/global.css';
+
 interface Props {
     title?: string;
+    description?: string;
+    image?: string;
+    canonical?: string;
 }
 
-const { title = "dual365 – Premium SaaS for Dual Training" } = Astro.props;
+const {
+    title = "dual365 – Plataforma Premium para Gestión de Formación Dual",
+    description = "Gestiona la Formación Dual de principio a fin: captación de empresas, selección de alumnado, documentación automatizada, calendarios y seguimiento en tiempo real. La solución integral para centros de FP.",
+    image = "/og-image.jpg",
+    canonical = Astro.url.pathname
+} = Astro.props;
+
+const siteUrl = Astro.site || "https://dual365.com";
+const canonicalURL = new URL(canonical, siteUrl);
+const ogImageURL = new URL(image, siteUrl);
 ---
 
 <!DOCTYPE html>
@@ -11,7 +25,32 @@ const { title = "dual365 – Premium SaaS for Dual Training" } = Astro.props;
     <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <!-- Primary Meta Tags -->
         <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImageURL} />
+        <meta property="og:locale" content="es_ES" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={ogImageURL} />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <!-- Fonts -->
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link
             crossorigin=""
@@ -19,77 +58,66 @@ const { title = "dual365 – Premium SaaS for Dual Training" } = Astro.props;
             rel="preconnect"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
             rel="stylesheet"
         />
         <link
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
             rel="stylesheet"
         />
-        <!-- Fallback a Tailwind CDN (con plugins solicitados en el diseño original) -->
-        <script
-            is:inline
-            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
-        ></script>
-        <style type="text/tailwindcss">
-            :root {
-                --rosa: #e8447a;
-                --rosa-mid: #f0729b;
-                --rosa-soft: #fde8ef;
-                --rosa-pale: #fff5f8;
-                --verde: #3daa4e;
-                --verde-mid: #5bbf6c;
-                --verde-soft: #e8f5eb;
-                --verde-pale: #f4faf5;
-                --ink: #1a0a24;
-                --line: rgba(26, 10, 36, 0.06);
-                --glass: rgba(255, 255, 255, 0.8);
-            }
-            body {
-                font-family: "Plus Jakarta Sans", sans-serif;
-                color: var(--ink);
-                background: #ffffff;
-                min-height: max(884px, 100dvh);
-            }
-            .serif {
-                font-family: "DM Serif Display", serif;
-            }
-            .glass {
-                background: var(--glass);
-                backdrop-filter: blur(16px);
-                -webkit-backdrop-filter: blur(16px);
-                border: 1px solid rgba(255, 255, 255, 0.5);
-            }
-            .premium-border {
-                border: 1px solid var(--line);
-            }
-            .lift-effect {
-                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            }
-            .lift-effect:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 30px 60px -12px rgba(26, 10, 36, 0.12);
-            }
-            .gradient-border-top {
-                position: relative;
-            }
-            .gradient-border-top::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 3px;
-                background: linear-gradient(
-                    to right,
-                    var(--rosa),
-                    var(--verde)
-                );
-                border-radius: 12px 12px 0 0;
-            }
-        </style>
     </head>
     <body class="antialiased">
         <slot />
+
+        <script>
+            // Animaciones al hacer scroll - configuración para secciones
+            const sectionObserverOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            // Configuración más temprana para cards y elementos pequeños
+            const cardObserverOptions = {
+                threshold: 0.05,
+                rootMargin: '0px 0px 100px 0px' // Las cards aparecen 100px antes de entrar al viewport
+            };
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        sectionObserver.unobserve(entry.target);
+                    }
+                });
+            }, sectionObserverOptions);
+
+            const cardObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        cardObserver.unobserve(entry.target);
+                    }
+                });
+            }, cardObserverOptions);
+
+            // Observar secciones
+            document.addEventListener('DOMContentLoaded', () => {
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    section.classList.add('animate-on-scroll');
+                    sectionObserver.observe(section);
+                });
+
+                // Observar cards y elementos específicos con animación más temprana
+                const cards = document.querySelectorAll('.lift-effect, .premium-border');
+                cards.forEach((card, index) => {
+                    card.classList.add('animate-on-scroll');
+                    if (card instanceof HTMLElement) {
+                        card.style.transitionDelay = `${index * 0.05}s`; // Delay más corto
+                    }
+                    cardObserver.observe(card);
+                });
+            });
+        </script>
     </body>
 </html>
