@@ -2,54 +2,47 @@
 // src/components/Dashboard.astro
 ---
 
-<section class="py-32 px-6 lg:px-12 bg-white" id="dashboard">
+<section class="pt-64 pb-48 px-6 lg:px-12 bg-white" id="dashboard">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
         <div class="order-2 lg:order-1">
             <div
-                class="bg-emerald-800 p-1 rounded-[42px] shadow-[0_40px_100px_-20px_rgba(6,78,59,0.3)]"
+                class="bg-transparent p-1 rounded-[42px] shadow-[0_0_0_2px_var(--verde),0_0_40px_8px_rgba(61,170,78,0.25)]"
             >
                 <div
-                    class="bg-gradient-to-br from-emerald-900 to-teal-900 p-10 rounded-[38px] relative overflow-hidden"
+                    class="bg-white p-14 rounded-[38px] relative overflow-hidden"
                 >
+
                     <div
-                        class="absolute -top-20 -right-20 w-80 h-80 bg-emerald-300/15 blur-[100px]"
-                    >
-                    </div>
-                    <div
-                        class="flex items-center justify-between border-b border-white/5 pb-8 mb-10"
+                        class="flex items-center justify-between border-b border-[var(--line)] pb-8 mb-10"
                     >
                         <div class="flex items-center gap-4">
-                            <div
-                                class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10"
-                            >
-                                <img
-                                    alt="logo"
-                                    class="h-4 invert grayscale brightness-200"
-                                    src="/logo.svg"
-                                />
-                            </div>
-                            <span class="font-bold text-white tracking-tight"
+                            <img
+                                alt="logo"
+                                class="h-4"
+                                src="/logo.svg"
+                            />
+                            <span class="font-bold text-[var(--ink)] tracking-tight"
                                 >Panel de Control</span
                             >
                         </div>
                         <div class="flex gap-2.5">
-                            <div class="w-2.5 h-2.5 rounded-full bg-white/10">
+                            <div class="w-2.5 h-2.5 rounded-full bg-[var(--line)]">
                             </div>
                             <div
                                 class="w-2.5 h-2.5 rounded-full bg-[var(--rosa)]"
                             >
                             </div>
-                            <div class="w-2.5 h-2.5 rounded-full bg-white/10">
+                            <div class="w-2.5 h-2.5 rounded-full bg-[var(--line)]">
                             </div>
                         </div>
                     </div>
                     <div class="grid grid-cols-12 gap-8">
                         <div class="col-span-4 space-y-6">
                             <div
-                                class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md"
+                                class="bg-[var(--verde-soft)]/40 p-6 rounded-2xl border border-[var(--line)]"
                             >
                                 <p
-                                    class="text-[10px] text-white/40 uppercase font-black tracking-widest mb-6"
+                                    class="text-[10px] text-gray-600 uppercase font-black tracking-widest mb-6"
                                 >
                                     Estado de Alumnos
                                 </p>
@@ -60,7 +53,7 @@
                                         >
                                         </div>
                                         <span
-                                            class="text-[11px] text-white/70 font-medium"
+                                            class="text-[11px] text-gray-700 font-medium"
                                             >Asignados (244)</span
                                         >
                                     </div>
@@ -70,7 +63,7 @@
                                         >
                                         </div>
                                         <span
-                                            class="text-[11px] text-white/70 font-medium"
+                                            class="text-[11px] text-gray-700 font-medium"
                                             >En espera (12)</span
                                         >
                                     </div>
@@ -80,7 +73,7 @@
                                         >
                                         </div>
                                         <span
-                                            class="text-[11px] text-white/70 font-medium"
+                                            class="text-[11px] text-gray-700 font-medium"
                                             >Sin empresa (5)</span
                                         >
                                     </div>
@@ -100,10 +93,10 @@
                         </div>
                         <div class="col-span-8 space-y-6">
                             <div
-                                class="bg-white/5 p-8 rounded-2xl border border-white/10"
+                                class="bg-[var(--verde-soft)]/40 p-8 rounded-2xl border border-[var(--line)]"
                             >
                                 <p
-                                    class="text-[10px] text-white/40 uppercase font-black tracking-widest mb-8"
+                                    class="text-[10px] text-gray-600 uppercase font-black tracking-widest mb-8"
                                 >
                                     FAMILIAS PROFESIONALES CON % DE PLAZAS
                                     CUBIERTAS
@@ -111,13 +104,13 @@
                                 <div class="space-y-7">
                                     <div class="space-y-2">
                                         <div
-                                            class="flex justify-between text-xs text-white/90 font-bold"
+                                            class="flex justify-between text-xs text-gray-700 font-bold"
                                         >
                                             <span>Informática</span>
                                             <span>92%</span>
                                         </div>
                                         <div
-                                            class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"
+                                            class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden"
                                         >
                                             <div
                                                 class="h-full bg-gradient-to-r from-[var(--rosa)] to-[var(--rosa-mid)] w-[92%]"
@@ -127,13 +120,13 @@
                                     </div>
                                     <div class="space-y-2">
                                         <div
-                                            class="flex justify-between text-xs text-white/90 font-bold"
+                                            class="flex justify-between text-xs text-gray-700 font-bold"
                                         >
                                             <span>Sanidad</span>
                                             <span>74%</span>
                                         </div>
                                         <div
-                                            class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"
+                                            class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden"
                                         >
                                             <div
                                                 class="h-full bg-gradient-to-r from-[var(--verde)] to-[var(--verde-mid)] w-[74%]"
@@ -143,13 +136,13 @@
                                     </div>
                                     <div class="space-y-2">
                                         <div
-                                            class="flex justify-between text-xs text-white/90 font-bold"
+                                            class="flex justify-between text-xs text-gray-700 font-bold"
                                         >
                                             <span>Administración</span>
                                             <span>88%</span>
                                         </div>
                                         <div
-                                            class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"
+                                            class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden"
                                         >
                                             <div
                                                 class="h-full bg-indigo-500 w-[88%]"
@@ -164,7 +157,7 @@
                 </div>
             </div>
         </div>
-        <div class="order-1 lg:order-2 space-y-10">
+        <div class="order-1 lg:order-2 space-y-7">
             <span
                 class="text-[var(--verde)] text-sm font-extrabold uppercase tracking-[0.3em]"
                 >Educación Basada en Datos</span
@@ -172,15 +165,15 @@
             <h2 class="serif text-6xl text-[var(--ink)] leading-tight">
                 Datos que <em>mejoran</em> la educación.
             </h2>
-            <p class="text-gray-500 text-xl leading-relaxed">
+            <p class="text-gray-700 text-xl leading-relaxed">
                 Por primera vez, un centro de FP conoce exactamente qué competencias demanda su tejido empresarial y puede adaptarse de forma proactiva.
             </p>
             <div class="space-y-5">
                 <div class="flex items-start gap-4">
                     <div
-                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                        class="flex-shrink-0 mt-0.5"
                     >
-                        ✓
+                        <span class="material-symbols-outlined text-[var(--verde)] text-2xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
                     </div>
                     <div>
                         <p class="font-bold text-[var(--ink)]">
@@ -190,9 +183,9 @@
                 </div>
                 <div class="flex items-start gap-4">
                     <div
-                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                        class="flex-shrink-0 mt-0.5"
                     >
-                        ✓
+                        <span class="material-symbols-outlined text-[var(--verde)] text-2xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
                     </div>
                     <div>
                         <p class="font-bold text-[var(--ink)]">
@@ -202,9 +195,9 @@
                 </div>
                 <div class="flex items-start gap-4">
                     <div
-                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                        class="flex-shrink-0 mt-0.5"
                     >
-                        ✓
+                        <span class="material-symbols-outlined text-[var(--verde)] text-2xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
                     </div>
                     <div>
                         <p class="font-bold text-[var(--ink)]">
@@ -214,9 +207,9 @@
                 </div>
                 <div class="flex items-start gap-4">
                     <div
-                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                        class="flex-shrink-0 mt-0.5"
                     >
-                        ✓
+                        <span class="material-symbols-outlined text-[var(--verde)] text-2xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
                     </div>
                     <div>
                         <p class="font-bold text-[var(--ink)]">
@@ -226,9 +219,9 @@
                 </div>
                 <div class="flex items-start gap-4">
                     <div
-                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                        class="flex-shrink-0 mt-0.5"
                     >
-                        ✓
+                        <span class="material-symbols-outlined text-[var(--verde)] text-2xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
                     </div>
                     <div>
                         <p class="font-bold text-[var(--ink)]">
@@ -238,9 +231,9 @@
                 </div>
                 <div class="flex items-start gap-4">
                     <div
-                        class="w-7 h-7 bg-[var(--verde-soft)] text-[var(--verde)] rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-1"
+                        class="flex-shrink-0 mt-0.5"
                     >
-                        ✓
+                        <span class="material-symbols-outlined text-[var(--verde)] text-2xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
                     </div>
                     <div>
                         <p class="font-bold text-[var(--ink)]">

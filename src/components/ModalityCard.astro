@@ -19,11 +19,11 @@ const borderHoverClass = hoverColorVar.startsWith("var")
     class={`bg-white p-12 rounded-[32px] border border-[var(--line)] relative group overflow-hidden transition-all ${borderHoverClass}`}
 >
     <span
-        class="serif text-9xl absolute -bottom-6 -right-6 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity select-none"
+        class="serif text-9xl absolute -bottom-6 -right-6 opacity-[0.08] group-hover:opacity-[0.15] transition-opacity select-none text-[var(--verde)]"
         >{number}
     </span>
     <h4 class="font-extrabold text-2xl mb-6 relative z-10">{title}</h4>
-    <p class="text-gray-500 text-sm leading-relaxed relative z-10">
+    <p class="text-gray-700 text-sm leading-relaxed relative z-10">
         {description}
     </p>
 </div>
