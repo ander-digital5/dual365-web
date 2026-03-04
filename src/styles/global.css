@@ -113,3 +113,12 @@ section:first-of-type {
 html {
     scroll-behavior: smooth;
 }
+
+/* Offset para scroll con navbar fija */
+[id] {
+    scroll-margin-top: -70px;
+}
+
+#cta {
+    scroll-margin-top: 30px;
+}
